@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: white;
+  background-color: #39b54a;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-top: 50px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+/* Ajustes para garantir que todas as imagens e vídeos tenham o mesmo tamanho */
+.carousel,
+.engenhao,
+.galeao,
+.floresta-tijuca,
+.museu-amanha,
+.theatro-municipal,
+.escadaria-selaron,
+.cbf,
+.parque-olimpico,
+.praia-barra,
+.praia-grumari,
+.praia-prainha,
+.praia-macumba {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel img,
+.engenhao img,
+.galeao img,
+.museu-amanha img,
+.theatro-municipal img,
+.cbf img,
+.parque-olimpico img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.floresta-tijuca iframe,
+.escadaria-selaron iframe,
+.praia-barra iframe,
+.praia-grumari iframe,
+.praia-prainha iframe,
+.praia-macumba iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.carousel p,
+.engenhao p,
+.galeao p,
+.floresta-tijuca p,
+.museu-amanha p,
+.theatro-municipal p,
+.escadaria-selaron p,
+.cbf p,
+.parque-olimpico p,
+.praia-barra p,
+.praia-grumari p,
+.praia-prainha p,
+.praia-macumba p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilo para o carrossel */
+.carousel {
+  position: relative;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.light-mode {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu input {
+  display: none;
+}
+
+.hamburger-menu .menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+}
+
+.hamburger-menu .dropdown-menu {
+  display: none;
+}
+
+.hamburger-menu input:checked ~ .dropdown-menu {
+  display: block;
+  background-color: #3498db;
+  list-style-type: none;
+}
+
+.hamburger-menu .dropdown-menu li {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul,
+  .hamburger-menu .dropdown-menu {
+    font-size: 0.9rem;
+  }
+
+  button.prev,
+  button.next {
+    padding: 5px;
+  }
+}
